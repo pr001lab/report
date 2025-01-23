@@ -175,7 +175,10 @@ button:active {
   stroke: #2D2D31;
 }
 
-.sidebar button:hover,
+.sidebar button:hover span {
+  text-decoration: underline;
+}
+
 .sidebar button:focus,
 .sidebar button:active,
 .sidebar button.active {
@@ -191,6 +194,14 @@ button:active {
 /*content*/
 section.active {
   display: block;
+  opacity: 0;
+  animation: opacity 1s forwards;
+}
+
+@keyframes opacity {
+  100% {
+    opacity: 1;
+  }
 }
 
 section:not(.active) {
